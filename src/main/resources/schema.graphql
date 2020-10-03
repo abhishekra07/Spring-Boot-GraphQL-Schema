@@ -1,0 +1,67 @@
+schema {
+	query: Query
+}
+
+#defining all queries
+type Query{
+	allBooks: [Book] #this way you can define list or array
+	book(id: String): Book
+	allUsers: [User]
+	user(id: String): User
+}
+
+#defining book type for our schema
+type Book{
+	isn: String
+	title: String
+	publisher: String
+	authors: [String]
+	publishedDate: String
+}
+
+#defining user type for our schema
+type User{
+	id: ID!
+	firstName: String
+	lastName: String
+	middleName: String
+	gender: String
+	age: String
+	weight: String
+	height: String
+	skinColour: String
+	sport: Sport
+	hobbies: [String]
+	address: Address
+	followers: String
+	following: String
+	post: Post
+}
+
+#defining sport type for our schema
+type Sport{
+	id: ID!
+	name: String
+	player: String
+}
+
+#defining address type for our schema
+type Address{
+	id: ID!
+	address: String
+	landmark: String
+	district: String
+	city: String
+	state: String
+	country: String
+	zipCode: String
+}
+
+#defining post type for our schema
+type Post{
+	id: ID!
+	date: String
+	likes: String
+	comments: String
+	shared: String
+}
